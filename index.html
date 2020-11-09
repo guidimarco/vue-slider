@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+    <head>
+        <meta charset="utf-8">
+        <title>Carosello VUE</title>
+
+        <!-- fontawesome -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
+
+        <!-- CSS link -->
+        <link rel="stylesheet" href="assets/style.css">
+
+        <!-- VUE CDN -->
+        <script src="https://cdn.jsdelivr.net/npm/vue@2.6.12/dist/vue.js"></script>
+    </head>
+
+    <body>
+        <div id="root">
+            <!-- TOP DIV: title -->
+            <div class="title">
+                <h1>{{ title }}</h1>
+            </div><!-- END TOP DIV: title -->
+
+            <div class="carousel-wrapper">
+
+                <!-- IMG LIST -->
+                <!-- img 1 -->
+                <img class="active" src="https://www.atuttodonna.it/atuttodonna/wp-content/uploads/2020/04/immagini-felicit%C3%A0.jpg" alt="smile">
+
+                <!-- SX PART: whit previus img link -->
+                <div class="prev">
+                    <i class="fas fa-arrow-left"></i>
+                </div>
+
+                <!-- BTM-DOWN PART: with dots link to img -->
+                <div class="dots">
+                    <div class="dot active"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+
+                <!-- DX PART: whit next img link -->
+                <div class="next">
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+            </div><!-- END BTM DIV: carousel wrapper -->
+        </div><!-- END OF #ROOT -->
+
+        <!-- javascript -->
+        <script type="text/javascript" src="assets/main.js"></script>
+    </body>
+</html>
