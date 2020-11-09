@@ -1,6 +1,7 @@
 var app = new Vue({
     el: "#root",
     data: {
+        autoplay: "null",
         title: "Le mie immagini",
         carouselIndex: 0,
         carouselImg: [
@@ -11,13 +12,13 @@ var app = new Vue({
         ]
     },
     methods: {
-        nextImg() { // next-img function
+        nextImg: function() { // next-img function
             this.carouselIndex++;
             if (this.carouselIndex == this.carouselImg.length) {
                 this.carouselIndex = 0;
             }
         },
-        prevImg() { // prev-img function
+        prevImg: function() { // prev-img function
             this.carouselIndex--;
             if (this.carouselIndex < 0) {
                 this.carouselIndex = this.carouselImg.length - 1;
@@ -30,10 +31,21 @@ var app = new Vue({
             clearInterval(autoplay);
         },
         restartAutoplay() {
-            autoplay = setInterval(this.nextImg, 3000);
+            autoplay = setInterval(this.nextImg, 1000);
+        },
+        test: function() {
+            console.log("ciao");
         }
     },
-    mounted() {
-        autoplay = setInterval(this.nextImg, 3000);
-    }
+    mounted: function() {
+        autoplay = setInterval(this.nextImg, 1000);
+
+        window.addEventListener("keydown", (e) => {
+            if (e.which == 37) {
+                this.prevImg();
+            } else if (e.which == 39) {
+                this.nextImg();
+            }
+        });
+    },
 });
