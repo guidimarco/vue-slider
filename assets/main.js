@@ -23,7 +23,6 @@ var app = new Vue({
                 this.carouselIndex = this.carouselImg.length - 1;
             }
         }
-
     }
 });
 

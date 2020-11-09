@@ -76,20 +76,14 @@ h1 {
     align-items: center;
 }
 
-.dot {
-    width: 10px;
-    height: 10px;
-    border: 2px solid white;
-    border-radius: 50%;
+.dots i {
+    color: white;
     margin: 0 3px;
     cursor: pointer;
     transition: all 0.3s;
 }
-.dot.active { /* active dot */
-    background-color: white;
-}
-.dot:hover {
-    box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.8);
+.dots i:hover {
+    color: red;
 }
 
 /* </1-fold END .carousel-wrapper */
