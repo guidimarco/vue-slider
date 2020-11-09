@@ -46,17 +46,25 @@ h1 {
     top: 0;
     bottom: 0;
     left: 0;
-    background: linear-gradient(270deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
-    color: white;
     display: flex;
     justify-content: center;
     align-items: center;
     opacity: 0;
-    cursor: pointer;
     transition: all 0.4s;
 }
+.carousel-wrapper .prev i,
+.carousel-wrapper .next i {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: black;
+    color: #e2e2e2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
 .carousel-wrapper .next {/* settings for right mover */
-    background: linear-gradient(90deg, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.6));
     left: unset;
     right: 0;
 }
@@ -83,7 +91,7 @@ h1 {
     transition: all 0.3s;
 }
 .dots i:hover {
-    color: red;
+    color: #e2e2e2;
 }
 
 /* </1-fold END .carousel-wrapper */

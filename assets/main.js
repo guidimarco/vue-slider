@@ -30,10 +30,10 @@ var app = new Vue({
             clearInterval(autoplay);
         },
         restartAutoplay() {
-            autoplay = setInterval(this.nextImg, 1000);
+            autoplay = setInterval(this.nextImg, 3000);
         }
     },
     mounted() {
-        autoplay = setInterval(this.nextImg, 1000);
+        autoplay = setInterval(this.nextImg, 3000);
     }
 });
