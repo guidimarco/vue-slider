@@ -26,5 +26,8 @@ var app = new Vue({
         toDotImg(index) { // dot-change-img
             this.carouselIndex = index;
         }
+    },
+    mounted() {
+        setInterval(this.nextImg, 3000);
     }
 });
