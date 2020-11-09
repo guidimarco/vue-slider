@@ -21,7 +21,7 @@
                 <h1>{{ title }}</h1>
             </div><!-- END TOP DIV: title -->
 
-            <div class="carousel-wrapper">
+            <div class="carousel-wrapper" @mouseenter="stopAutoplay()" @mouseleave="restartAutoplay()">
 
                 <!-- IMG LIST -->
                 <!-- img 1 -->

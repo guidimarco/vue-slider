@@ -25,9 +25,15 @@ var app = new Vue({
         },
         toDotImg(index) { // dot-change-img
             this.carouselIndex = index;
+        },
+        stopAutoplay() {
+            clearInterval(autoplay);
+        },
+        restartAutoplay() {
+            autoplay = setInterval(this.nextImg, 1000);
         }
     },
     mounted() {
-        setInterval(this.nextImg, 3000);
+        autoplay = setInterval(this.nextImg, 1000);
     }
 });
