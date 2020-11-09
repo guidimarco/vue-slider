@@ -2,9 +2,29 @@ var app = new Vue({
     el: "#root",
     data: {
         title: "Le mie immagini",
-        coffeeImg: "https://images.unsplash.com/photo-1489533119213-66a5cd877091?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=700&q=60",
-    }
+        carouselIndex: 0,
+        carouselImg: [
+            "img/smile.jpg",
+            "img/faro.jpg",
+            "img/juice.webp",
+            "img/albero.jpg"
+        ]
+    },
+    methods: {
+        nextImg() {
+            this.carouselIndex++;
+            if (this.carouselIndex == this.carouselImg.length) {
+                this.carouselIndex = 0;
+            }
+        },
+        prevImg() {
+            this.carouselIndex--;
+            if (this.carouselIndex < 0) {
+                this.carouselIndex = this.carouselImg.length - 1;
+            }
+        }
 
+    }
 });
 
 // $("document").ready(function() {

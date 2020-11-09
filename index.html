@@ -25,11 +25,11 @@
 
                 <!-- IMG LIST -->
                 <!-- img 1 -->
-                <img class="active" src="https://www.atuttodonna.it/atuttodonna/wp-content/uploads/2020/04/immagini-felicit%C3%A0.jpg" alt="smile">
+                <img v-bind:src="carouselImg[carouselIndex]">
 
                 <!-- SX PART: whit previus img link -->
                 <div class="prev">
-                    <i class="fas fa-arrow-left"></i>
+                    <i class="fas fa-arrow-left" @click="prevImg"></i>
                 </div>
 
                 <!-- BTM-DOWN PART: with dots link to img -->
@@ -42,7 +42,7 @@
 
                 <!-- DX PART: whit next img link -->
                 <div class="next">
-                    <i class="fas fa-arrow-right"></i>
+                    <i class="fas fa-arrow-right" @click="nextImg"></i>
                 </div>
             </div><!-- END BTM DIV: carousel wrapper -->
         </div><!-- END OF #ROOT -->
