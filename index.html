@@ -33,10 +33,11 @@
                 </div>
 
                 <!-- BTM-DOWN PART: with dots link to img -->
-                <div class="dots">
+                <div class="dots" >
                     <i class="fa-circle"
-                    v-for="(img, index) in carouselImg"
-                    v-bind:class="(index == carouselIndex) ? 'fas' : 'far'">
+                    v-for="(dot, index) in carouselImg"
+                    v-bind:class="(index == carouselIndex) ? 'fas' : 'far'"
+                    @click="toDotImg(index)">
                     </i>
                 </div>
 
